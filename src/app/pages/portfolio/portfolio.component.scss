@@ -1,0 +1,56 @@
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 50px;
+
+  .portfolio-item {
+    text-align: center;
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.5em;
+        margin: 10px auto;
+        color: #444444;
+        text-wrap: pretty;
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-item a p {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 420px) {
+  .portfolio-item a img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .portfolio-item a p {
+    font-size: 1em;
+  }
+}

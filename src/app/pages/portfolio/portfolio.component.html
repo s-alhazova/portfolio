@@ -1,0 +1,8 @@
+<section class="portfolio">
+  <div *ngFor="let item of portfolioItems" class="portfolio-item">
+    <a [routerLink]="['/portfolio', item.id]">
+      <img [src]="item.images[0]" [alt]="item.title" draggable="false">
+      <p>{{ item.title }}</p>
+    </a>
+  </div>
+</section>

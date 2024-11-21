@@ -1,0 +1,59 @@
+.contact {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    font-size: 4em;
+    font-weight: normal;
+    margin: 20px 0 60px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .full-width {
+      width: 100%;
+    }
+
+    button {
+      align-self: center;
+      width: 100%;
+      max-width: 150px;
+    }
+  }
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  button {
+    flex-shrink: 0;
+  }
+
+  mat-spinner {
+    flex-shrink: 0;
+  }
+}
+
+.success-snackbar {
+  background-color: #4caf50;
+  color: white;
+}
+
+.error-snackbar {
+  background-color: #f44336;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .contact h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+}

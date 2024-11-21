@@ -1,0 +1,30 @@
+<section *ngIf="item" class="portfolio-item-detail">
+  <h1>{{ item!.title }}</h1>
+
+  <!-- Общий контейнер для изображений и инфо-блока -->
+  <div class="content-wrapper">
+    <div class="portfolio-images">
+      <img *ngFor="let image of item.images" [src]="image" [alt]="item!.title" draggable="false">
+    </div>
+
+    <section class="info-block">
+      <img src="assets/logo.webp" alt="Logo" class="logo">
+      <div class="info-text">
+        <h2>{{ infoText }}</h2>
+      </div>
+      <a href="https://t.me/sonnnneiko" target="_blank" class="social-link">
+        <img src="assets/icons/telegram-color-icon.svg" alt="Telegram Icon">
+        <span>{{ telegramLink }}</span>
+      </a>
+    </section>
+  </div>
+</section>
+
+<div class="back-to-top" (click)="scrollToTop()">
+  <img src="assets/icons/up-arrow.svg" alt="Up arrow">
+  <span>{{ backToTop }}</span>
+</div>
+
+<section *ngIf="!item" class="error">
+  <p>{{ itemError }}</p>
+</section>

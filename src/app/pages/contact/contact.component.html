@@ -1,0 +1,49 @@
+<section class="contact">
+  <h1>{{ title }}</h1>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>{{ nameLabel }}</mat-label>
+      <input matInput formControlName="name" placeholder="Введите имя">
+      <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
+        Необходимо имя
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('name')?.hasError('minlength')">
+        Имя должно состоять из двух или более букв
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>{{ emailLabel }}</mat-label>
+      <input matInput formControlName="email" placeholder="Введите Email адрес">
+      <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+        Необходим Email
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
+        Проверьте введённый Email
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>{{ messageLabel }}</mat-label>
+      <textarea matInput formControlName="message" placeholder="Введите сообщение"></textarea>
+      <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
+        Необходимо написать сообщение
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('message')?.hasError('minlength')">
+        Сообщение должно состоять из 10 или более символов
+      </mat-error>
+    </mat-form-field>
+
+    <div class="form-footer">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="contactForm.invalid || isLoading"
+      >
+        {{ submitLabel }}
+      </button>
+      <mat-spinner *ngIf="isLoading" diameter="30"></mat-spinner>
+    </div>
+  </form>
+</section>

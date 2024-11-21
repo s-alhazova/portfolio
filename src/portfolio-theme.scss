@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+// Определяем палитры цветов
+$custom-primary: mat.define-palette(mat.$mat-grey, 900); // Основной цвет — темный серый
+$custom-accent: mat.define-palette(mat.$mat-grey, 500); // Дополнительный цвет — серый
+$custom-warn: mat.define-palette(mat.$mat-red); // Цвет предупреждений
+$background-color: #f9f2fb; // Фоновый цвет приложения
+
+// Создаем тему
+$portfolio-theme: mat.define-light-theme((
+  color: (
+    theme-type: light,
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+    background: (
+      app-background: $background-color
+    )
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Подключение темы
+@include mat.all-component-themes($portfolio-theme);
