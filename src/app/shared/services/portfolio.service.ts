@@ -27,6 +27,11 @@ export class PortfolioService {
       title: 'Dota 2',
       images: ['assets/img/portfolio/4/1.webp', 'assets/img/portfolio/4/2.webp', 'assets/img/portfolio/4/3.webp'],
     },
+    {
+      id: '5',
+      title: 'Фирменный стиль кофейни',
+      images: ['assets/img/portfolio/5/1.webp', 'assets/img/portfolio/5/2.webp', 'assets/img/portfolio/5/3.webp', 'assets/img/portfolio/5/4.webp', 'assets/img/portfolio/5/5.webp', 'assets/img/portfolio/5/6.webp', 'assets/img/portfolio/5/7.webp', 'assets/img/portfolio/5/8.webp', 'assets/img/portfolio/5/9.webp'],
+    },
   ];
 
   public getAllItems(): PortfolioItem[] {
