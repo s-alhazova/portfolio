@@ -21,6 +21,6 @@ export class PortfolioComponent implements OnInit {
   private portfolioService = inject(PortfolioService);
 
   ngOnInit(): void {
-      this.portfolioItems = this.portfolioService.getAllItems();
+      this.portfolioItems = this.portfolioService.getAllItems().slice().reverse();
   }
 }

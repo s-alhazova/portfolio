@@ -9,23 +9,23 @@ export class PortfolioService {
   private readonly portfolioItems: PortfolioItem[] = [
     {
       id: '1',
-      title: 'Дизайн карточки товара. Инфографика',
-      images: ['assets/img/portfolio/1/1.webp', 'assets/img/portfolio/1/2.webp', 'assets/img/portfolio/1/3.webp', 'assets/img/portfolio/1/4.webp', 'assets/img/portfolio/1/5.webp'],
+      title: 'Dota 2',
+      images: ['assets/img/portfolio/1/1.webp', 'assets/img/portfolio/1/2.webp', 'assets/img/portfolio/1/3.webp'],
     },
     {
       id: '2',
-      title: 'Инфографика. Дизайн карточек товара',
-      images: ['assets/img/portfolio/2/1.webp', 'assets/img/portfolio/2/2.webp', 'assets/img/portfolio/2/3.webp', 'assets/img/portfolio/2/4.webp', 'assets/img/portfolio/2/5.webp', 'assets/img/portfolio/2/6.webp'],
+      title: 'Decor trash',
+      images: ['assets/img/portfolio/2/1.webp', 'assets/img/portfolio/2/2.webp', 'assets/img/portfolio/2/3.webp', 'assets/img/portfolio/2/4.webp'],
     },
     {
       id: '3',
-      title: 'Decor trash',
-      images: ['assets/img/portfolio/3/1.webp', 'assets/img/portfolio/3/2.webp', 'assets/img/portfolio/3/3.webp', 'assets/img/portfolio/3/4.webp'],
+      title: 'Инфографика. Дизайн карточек товара',
+      images: ['assets/img/portfolio/3/1.webp', 'assets/img/portfolio/3/2.webp', 'assets/img/portfolio/3/3.webp', 'assets/img/portfolio/3/4.webp', 'assets/img/portfolio/3/5.webp', 'assets/img/portfolio/3/6.webp'],
     },
     {
       id: '4',
-      title: 'Dota 2',
-      images: ['assets/img/portfolio/4/1.webp', 'assets/img/portfolio/4/2.webp', 'assets/img/portfolio/4/3.webp'],
+      title: 'Дизайн карточки товара. Инфографика',
+      images: ['assets/img/portfolio/4/1.webp', 'assets/img/portfolio/4/2.webp', 'assets/img/portfolio/4/3.webp', 'assets/img/portfolio/4/4.webp', 'assets/img/portfolio/4/5.webp'],
     },
     {
       id: '5',
